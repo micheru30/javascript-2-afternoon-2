@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr){
+  return arr[0]
+}
 
 
 
@@ -32,7 +34,9 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last (arr){
+  return arr.pop()
+}
 
 
 
@@ -47,7 +51,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family){
+  for (let i=0;i<family.length;i++){
+    alert(family[i])
+  }
+}
 
 
 
@@ -62,7 +70,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+function reversedLooper(letters){
+for(let i = letters.length-1;i>=0;i--){
+  alert(letters[i])
+}
+}
 
 
 
@@ -77,7 +89,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+function evenFinder(nums){
+  evensArray = [];
+  for (let i=0;i<nums.length;i++){
+  if (nums[i]%2===0){
+    evensArray.push(nums[i])
+  }
+}
+  return evensArray;
+}
 
 
 
@@ -105,7 +125,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  let evens = [];
+  let odds = [];
+  for (let i=0;i<numbersArray.length;i++){
+    if (numbersArray[i]%2===0){
+      evens.push(numbersArray[i])
+    }
+    else if (numbersArray[i]%2!==0){
+      odds.push(numbersArray[i])
+    }
+  }
+  return [evens,odds];
+}
 
 
 
@@ -126,7 +158,15 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr){
+  let trueOrFalse = false;
+  for (let i=0;i<arr.length;i++){
+    if (arr[i]===getRandomArbitrary()){
+      trueOrFalse = true;
+    }
+  }
+  return trueOrFalse;
+}
 
 
 
